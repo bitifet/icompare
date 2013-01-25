@@ -1,4 +1,4 @@
-=======
+========
 iCompare
 ========
 
@@ -20,18 +20,19 @@ Following rows must start with heading (<th>) containing the property name and m
 Usage
 =====
 
-	$("table#MyTable").iCompare(); 
+  $("table#MyTable").iCompare(); 
 
 
 Dependencys
 ===========
 
-    * jQuery: http://jquery.com/
+  * jQuery: http://jquery.com/
 
 
 Example
 =======
 
+::
   <script type="text/javascript" charset="utf-8">
     $(function(){
       $(".compare").iCompare();
@@ -111,6 +112,3 @@ Example
       <td>3</td>
     </tr>
   </table>
-
-
-
