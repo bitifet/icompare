@@ -1,132 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html>
-<head><!--{{{-->
-<!-- vim:foldmethod=marker
--->
-  <title>jCompare</title>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <style type="text/css" media="screen">
-    body>* {
-      margin:auto;
-    }
-  </style>
-</head><!--}}}-->
-<body><!--{{{-->
-  <table class="compare"><!--{{{-->
-    <tr>
-      <td></td>
-      <th id="manolo">Item 1</th>
-      <th id="">Item 2</th>
-      <th>Item 3</th>
-      <th>Item 4</th>
-      <th id="Pepito">Item 5</th>
-      <th>Item 6</th>
-      <th>Item 7</th>
-      <th>Item 8</th>
-    </tr>
-    <tr>
-      <th>Color</th>
-      <td>Red</td>
-      <td>Green</td>
-      <td>Blue</td>
-      <td>Green</td>
-      <td>Yellow</td>
-      <td>Yellow</td>
-      <td>Brown</td>
-      <td>Yellow</td>
-    </tr>
-    <tr>
-      <th>Height</th>
-      <td>1m</td>
-      <td>2m</td>
-      <td>1m</td>
-      <td>2m</td>
-      <td>1m</td>
-      <td>3m</td>
-      <td>2m</td>
-      <td>1m</td>
-    </tr>
-    <tr>
-      <th>Width</th>
-      <td>3m</td>
-      <td>3m</td>
-      <td>2m</td>
-      <td>1m</td>
-      <td>7m</td>
-      <td>9m</td>
-      <td>7m</td>
-      <td>9m</td>
-    </tr>
-    <tr>
-      <th>Wheigt</th>
-      <td>8kg</td>
-      <td>8kg</td>
-      <td>8kg</td>
-      <td>8kg</td>
-      <td>8Kg</td>
-      <td>5Kg</td>
-      <td>8Kg</td>
-      <td>8Kg</td>
-    </tr>
-    <tr>
-      <th>Age</th>
-      <td>20</td>
-      <td>15</td>
-      <td>32</td>
-      <td>32</td>
-      <td>20</td>
-      <td>11</td>
-      <td>32</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>Organization</th>
-      <td>Samsung</td>
-      <td>Canonical</td>
-      <td>Debian</td>
-      <td>Debian</td>
-      <td>Bitifet</td>
-      <td>Bitifet</td>
-      <td>Pirate Partey</td>
-      <td>Debian</td>
-    </tr>
-    <tr>
-      <th>Price</th>
-      <td>77</td>
-      <td>45</td>
-      <td>15</td>
-      <td>15</td>
-      <td>45</td>
-      <td>77</td>
-      <td>15</td>
-      <td>77</td>
-    </tr>
-    <tr>
-      <th>Currency</th>
-      <td>$</td>
-      <td>$</td>
-      <td>$</td>
-      <td>€</td>
-      <td>€</td>
-      <td>€</td>
-      <td>€</td>
-      <td>pts</td>
-    </tr>
-    <tr>
-      <th>Stock</th>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-  </table><!--}}}-->
-</body><!--}}}-->
-<script type="text/javascript" charset="utf-8"><!--{{{-->
+/*
+ * iCompare.js
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author: Joan Miquel Torres <joanmi@bitifet.net>
+ *
+ *
+ *
+ */
 
 (function( $ ){
 
@@ -337,37 +229,16 @@
 		});
 	};/*}}}*/
 
-	self.destroy=function( ) {/*{{{*/
-		///return this.each(function(){
-		///})
-	};/*}}}*/
-
-	$.fn.contrast = function( method ) {/*{{{*/
+	$.fn.iCompare = function( method ) {/*{{{*/
 		if ( self[method] ) {
 			return self[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
 		} else if ( typeof method === 'object' || ! method ) {
 			return self.init.apply( this, arguments );
 		} else {
-			$.error( 'Method ' +  method + ' does not exist on jQuery.contrast' );
+			$.error( 'Method ' +  method + ' does not exist on jQuery.iCompare' );
 		}    
 	}/*}}}*/
 
 })( jQuery );
 
-
-
-$(function(){
-	var x=$(".compare").contrast({
-	///  "th-bgcolor" : "magenta"
-	});
-
-///	x.contrast("itemToggle", "Pepito");
-///	x.contrast("itemToggle", "pepito"); // Error.
-});
-
-
-
-
-  
-</script><!--}}}-->
-</html>
+// vim:foldmethod=marker
