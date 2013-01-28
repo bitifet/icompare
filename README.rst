@@ -17,6 +17,11 @@ The first row must consist in an empty data cell (<td>) followed by many heading
 
 Following rows must start with heading (<th>) containing the property name and many data cells (<td>) with the property value for each item.
 
+Demostration
+============
+
+You can see some demos in the `iCompare Demo<http://bitifet.net/~joanmi/iCompare/demos/demo.php>`
+
 Usage
 =====
 
@@ -29,10 +34,12 @@ Dependencys
   * jQuery: http://jquery.com/
 
 
-Example
-=======
+Sample Code
+===========
 
 ::
+
+  #!html
   <script type="text/javascript" charset="utf-8">
     $(function(){
       $(".compare").iCompare();

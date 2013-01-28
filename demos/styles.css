@@ -1,0 +1,86 @@
+body {
+}
+
+body,
+div#container,
+div#container>div {
+	margin:0px;
+	border:0px;
+	padding:0px;
+}
+
+div#container {
+	height:100%;
+	width:100%;
+	position:absolute;
+}
+
+div#container div {
+	position:relative;
+	float:left;
+}
+
+
+div#menu {
+	width:100%;
+	padding-left:1em;
+	padding-right:1em;
+}
+div#menu ul {
+	margin:0px;
+	margin-left:1em;
+	margin-right:1em;
+	padding:0px;
+	margin-bottom:2em;
+}
+div#menu li {
+	list-style-type:none;
+	padding-left:1em;
+	padding-right:1em;
+}
+div#menu li:hover {
+	background: #999999;
+}
+
+div#sidebar {
+	width:30%;
+	height:100%;
+	overflow:auto;
+	background:#eeffcc;
+}
+
+div#sidebar h2{
+	padding-left:1em;
+}
+div#source {
+	padding-left:1em;
+	padding-right:1em;
+	padding-bottom:1em;
+}
+
+div#view {
+	width:70%;
+	height:100%;
+	overflow:auto;
+	background:#ddeeff;
+}
+
+
+div#view table {
+	margin:auto;
+}
+
+
+
+
+
+table.compare {
+	margin:1em !important;
+	background: #00aaaa;
+}
+table.compare th {
+	background: #99dddd;
+}
+table.compare td {
+	background: #aaaaaa;
+}

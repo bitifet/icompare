@@ -1,7 +1,7 @@
 /*
  * iCompare.js
  *
- * This program is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify//{{{
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
@@ -12,11 +12,9 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.//}}}
  *
  * @author: Joan Miquel Torres <joanmi@bitifet.net>
- *
- *
  *
  */
 
@@ -48,10 +46,11 @@
 		var t = $this;
 		var rows=$this.find("tr");
 		var sl;
-		var ctrlAddPropertys=$("<select><option>+Prop</option></select>")
+		var ctrlAddPropertys=$(Settings.controls["AddPropertys"])
 			.appendTo(Settings.ControlPanel);
-		var ctrlAddItems=$("<select><option>+Item</option></select>")
+		var ctrlAddItems=$(Settings.controls["AddItems"])
 			.appendTo(Settings.ControlPanel);
+
 		rows.each(function(i){
 			if(! i) { // Header (first row)/*{{{*/
 				activeItemsCount=(
@@ -68,7 +67,7 @@
 							"candidate" : true,
 							"props" : {},
 							"self" : t.find("tr").find("td:nth-child("+k+"),th:nth-child("+k+")"),
-							"ctrl_discard" : $("<a href=\"#\">[x]</a>")
+							"ctrl_discard" : $(Settings.controls["DiscardItem"])
 								.appendTo($this)
 								.click(function(e){
 									self.itemToggle(j);
@@ -105,7 +104,7 @@
 					"display" : $("<li></li>").appendTo(sl).hide(),
 					///"self" : row.find("td,th") // (Only for color-debugging...)
 					"self" : row,
-					"ctrl_discard" : $("<a href=\"#\">[x]</a>")
+					"ctrl_discard" : $(Settings.controls["DiscardProperty"])
 						.appendTo(cell)
 						.click(function(e){
 							self.propToggle(prop);
@@ -210,20 +209,16 @@
 
 				// Default options:/*{{{*/
 				Settings=$.extend({
-					"bgcolor" : "#00aaaa",
-					"tr-bgcolor" : null,
-					"th-bgcolor" : "#99dddd",
-					"td-bgcolor" : "#aaaaaa",
-
 					"ControlPanel" : $this.find("tr td").first(),
+					"controls" : {
+						"AddPropertys" : "<select><option>+Prop</option></select>",
+						"AddItems" : "<select><option>+Item</option></select>",
+						"DiscardItem" : "<a href=\"#\">[x]</a>",
+						"DiscardProperty" : "<a href=\"#\">[x]</a>",
+					}
+
 				}, options);/*}}}*/
 
-				// Style initialization:/*{{{*/
-				$this.css("background", Settings["bgcolor"]);
-				$this.find("tr").css("background", Settings["tr-bgcolor"]);
-				$this.find("th").css("background", Settings["th-bgcolor"]);
-				$this.find("td").css("background", Settings["td-bgcolor"]);
-				/*}}}*/
 				self.tableSetup();
 			};/*}}}*/
 		});
