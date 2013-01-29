@@ -204,23 +204,23 @@
 
 	self.init=function( options ) {/*{{{*/
 		return this.each(function(){
-			if ( ! Settings ) { // Setup./*{{{*/
-				$this = $(this),
+			// Setup./*{{{*/
+			$this = $(this),
 
-				// Default options:/*{{{*/
-				Settings=$.extend({
-					"ControlPanel" : $this.find("tr td").first(),
-					"controls" : {
-						"AddPropertys" : "<select><option>+Prop</option></select>",
-						"AddItems" : "<select><option>+Item</option></select>",
-						"DiscardItem" : "<a href=\"#\">[x]</a>",
-						"DiscardProperty" : "<a href=\"#\">[x]</a>",
-					}
+			// Default options:/*{{{*/
+			Settings=$.extend({
+				"ControlPanel" : $this.find("tr td").first(),
+				"controls" : {
+					"AddPropertys" : "<select><option>+Prop</option></select>",
+					"AddItems" : "<select><option>+Item</option></select>",
+					"DiscardItem" : "<a href=\"#\">[x]</a>",
+					"DiscardProperty" : "<a href=\"#\">[x]</a>",
+				}
 
-				}, options);/*}}}*/
+			}, options);/*}}}*/
 
-				self.tableSetup();
-			};/*}}}*/
+			self.tableSetup();
+			/*}}}*/
 		});
 	};/*}}}*/
 

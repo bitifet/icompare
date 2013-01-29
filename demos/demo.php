@@ -8,11 +8,6 @@
   <link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="../iCompare.js"></script>
-  <script type="text/javascript" charset="utf-8">
-    $(function(){
-      $(".compare").iCompare();
-    });
-  </script>
 </head><!--}}}-->
 <body><!--{{{-->
 <div id="container">
